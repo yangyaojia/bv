@@ -68,12 +68,13 @@ class MainActivity : ComponentActivity() {
                     if (!userLockLocked) {
                         HomeScreen()
                     } else {
-                        UnlockUserScreen(
-                            onUnlockSuccess = { user ->
-                                logger.info { "unlock user lock for user ${user.uid}" }
-                                userLockLocked = false
-                            }
-                        )
+                        HomeScreen()
+                        // UnlockUserScreen(
+                        //     onUnlockSuccess = { user ->
+                        //         logger.info { "unlock user lock for user ${user.uid}" }
+                        //         userLockLocked = false
+                        //     }
+                        // )
                     }
                 }
             }
