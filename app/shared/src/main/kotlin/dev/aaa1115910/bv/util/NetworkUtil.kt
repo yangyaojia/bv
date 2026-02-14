@@ -43,7 +43,7 @@ object NetworkUtil {
                         .filter { it.isNotBlank() }
                         .associate { with(it.split("=")) { this[0] to this[1] } }
 
-                    require(networkCheckResult["loc"] != "CN") { "BV doesn't support use in mainland China" }
+                    require(networkCheckResult["loc"] != "XX") { "BV doesn't support use in mainland China" }
                     false
                 }.getOrDefault(true)
             }
